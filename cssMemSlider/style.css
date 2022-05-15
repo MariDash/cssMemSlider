@@ -15,7 +15,6 @@ body {
     padding: 1.5rem;
     background: #b4b6ba;
     text-align: center;
-    width: 100%;
     border-bottom: 0.15rem solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(to left, #fff, #ffb406, #fff);
@@ -99,7 +98,6 @@ input {
 .slider__control {
     width: 1.8rem;
     height: 1.8rem;
-    border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s;
     display: flex;
@@ -134,6 +132,15 @@ input {
     border: 0.2rem solid #ffb406;
 }
 
+#radio1:checked ~ .slider__controls .slider__control:first-child:hover > .slider__btn, 
+#radio2:checked ~ .slider__controls .slider__control:nth-child(2):hover > .slider__btn,
+#radio3:checked ~ .slider__controls .slider__control:nth-child(3):hover > .slider__btn,
+#radio4:checked ~ .slider__controls .slider__control:nth-child(4):hover > .slider__btn,
+#radio5:checked ~ .slider__controls .slider__control:last-child:hover > .slider__btn {
+    background: #e1e3e5;
+    border: 0.2rem solid #ff6f00;
+}
+
 #radio1:checked ~ .slider__pics .pics, 
 #radio1:checked ~ .slider__texts .texts {
     margin-left: 0;
@@ -159,3 +166,25 @@ input {
     margin-left: -400%;
 }
 
+@media screen and (max-width: 768px) {
+    .header__container {
+        width: 80%; 
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .slider {
+        width: 80%;
+        grid-template-areas: 
+                "a a a"
+                "b b b"
+                "d d d"
+                "c c c";
+    }
+
+    .slider__controls {
+        justify-content: center;
+    }
+}
