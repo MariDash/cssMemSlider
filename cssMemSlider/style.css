@@ -39,14 +39,14 @@ input {
 }
 
 .slider {
-    width: 80%;
+    width: 45%;
     margin: 0 auto;
     display: grid;
     grid-template-areas: 
             "a a a"
             "b b b"
             "c c d";
-    padding: 5%;
+    padding: 1rem;
 }
 
 .slider__pics {
@@ -68,11 +68,9 @@ input {
     display: block;
     width: calc(20% - 2rem);
     height: auto;    
-    /* height: 500px;     */
-    /* background: red; */
     margin: 0 1rem;
     border-radius: 1rem;
-    box-shadow: 0 0 0.5rem 0.2rem #ffb406;
+    box-shadow: 0 0 0.5rem 0.2rem #fff;
 }
 
 .slider__texts {
@@ -85,7 +83,8 @@ input {
 .slider__text {
     width: calc(20% - 2rem);
     display: block;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    line-height: 110%;
     margin: 0 1rem;
 }
 
@@ -94,6 +93,7 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    padding: 1rem 1rem 1rem 0;
 }
 
 .slider__control {
